@@ -5,13 +5,8 @@ import './App.css';
 function City(props) {
   return (
 <div>
-      <h2> {props.locationText} </h2>
-      <ul>
-        <li> State: {props.state} </li>
-        <li> Location: {props.location} </li>
-        <li> Population: {props.population} </li>
-        <li> Total Wages: {props.totalWages}</li>
-      </ul>
+      {/* <h2> {this.cityValue} </h2> */}
+      
     </div>
     );
 }
@@ -65,6 +60,7 @@ class App extends Component {
   }
 
 
+
   // look at boards project for render for city 
   render() {
     // // let {userResultArray} = this.state.userCity;
@@ -80,7 +76,7 @@ class App extends Component {
         </div>
         <ZipSearchField zipChanged={(e) => this.handleZipChange(e)} zipValue={this.state.userInputValue} />
         <div>
-        <City zipChanged={(e) => this.handleZipChange(e)} cityValue={this.state.userResultArray}  /> 
+        <City cityValue={this.state.userResultArray} /> 
           {/* <City zipChanged={(e) => this.handleZipChange(e)} cityValue={this.state.userResultArray[0]}  stateValue={this.state.userResultArray} /> 
           <City zipChanged={(e) => this.handleZipChange(e)} stateValue={this.state.userResultArray} 
           Location={this.state.userResultArray} EstimatedPopulation={this.state.userResultArray} TotalWages={this.state.userResultArray}  /> */}
